@@ -4,6 +4,7 @@
 - [February 13, 2025 - Product Expansion](#entry1)
 - [February 16, 2025 - Design Review Preparation](#entry2)
 - [February 24, 2025 - Planning PCB Design](#entry3)
+- [March 6, 2025 - Bluetooth LE](#entry4)
 
 ## February 06, 2025 - Idea Finalization <a name="entry0"></a>
 After individually brainstorming, we met up as a group to pool our ideas and narrow down our options in order to complete an RFA (request for approval) for our project. We decided on a micro-controller based project that would double as a backpack item tracker to prevent losing or leaving behind the contents of one's backpack and act as an anti-theft device. This device would utilize RFID technology to keep track of items and a gyroscope based system that would be used to detect if the backpack is being moved. Criteria for Success Accurate RFID Tracking: The system must reliably detect and track RFID-tagged items in real-time, alerting users when an item is missing. 
@@ -27,6 +28,24 @@ We fleshed out some details on our design in order to present it to the TA and p
 Our group met up and began discussing the specifics of how we were going to implement the design of each of our three subsystems. The RFID system and the accelerometer/gyroscope system seem to have a straightforward path ahead of designing the circuit since the conceptual functions have been decided upon. Most of our focus was on the automatic zipper subsystem, which seems like it will be the most difficult. We came up with a couple potential ways to implement this, however an outright zipper system may be too complicated and we may have to do automatic backpack closing via a different method.
 Currently, the most promising ideas are to have a motorized spool with higher torque attached to one side of the zipper and then have the cable anchored to the other side of the zipper so that when the backpack is open and the front is folded over, the spool can pull the backpack together to make it easier to seal.
 Sealing with the zipper may be hard, so we came up with the idea to use magnetic fasteners, perhaps in conjunction with a latching mechanism. However this needs to be fleshed out.
+
+
+- [March 6, 2025 - Bluetooth LE](#entry4)
+
+Notes on bluetooh for ESP32:
+
+  Bluetooth Stack - ESP32 uses BLUEDROID to imple,ment the layers of Bluetooth Protocol
+
+  Bluetooth profiles that we plan on using - GAP, Generic Access Profile, Device Discovery, Connections & SEcurity
+
+  Bluetooth Protocols:
+    L2CAP - Logical Link control and Adpatation
+    Organizes Bluetooth Traffic
+    Dataa Transmission
+
+    SDP - Service  
+  
+
 \
 \
 To do next time:
