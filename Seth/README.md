@@ -5,6 +5,7 @@
 - [Feb. 16, 2025 - Design Review Preparation](#entry2)
 - [Feb. 24, 2025 - Planning PCB Design](#entry3)
 - [Mar. 10, 2025 - Implementing Basic RFID](#entry4)
+- [Mar. 11, 2025 - Finding Bugs in Current Implementation](#entry5)
 
 ## February 06, 2025 - Idea Finalization <a name="entry0"></a>
 After individually brainstorming, we met up as a group to pool our ideas and narrow down our options in order to complete an RFA (request for approval) for our project. We decided on a micro-controller based project that would double as a backpack item tracker to prevent losing or leaving behind the contents of one's backpack and act as an anti-theft device. This device would utilize RFID technology to keep track of items and a gyroscope based system that would be used to detect if the backpack is being moved. Criteria for Success Accurate RFID Tracking: The system must reliably detect and track RFID-tagged items in real-time, alerting users when an item is missing. 
@@ -41,3 +42,6 @@ We worked on different parts of the project to get the basic functionality of so
 \
 \
 <img src="esp32-rfid.png" alt="drawing" width="500"/>
+
+## March 11, 2025 - Finding Bugs in Current Implementation <a name="entry5"></a>
+After the bluetooth functionality prototype was integrated with the RFID code, the breadboard prototype was put to the test to explain some functionality, and we realized that there were some bugs that need to be fixed with the bluetooth and some functionality added to the RFID system. The bluetooth seems to run on a delay or not receive the signal when it's around other microcontrollers, and we suspect it has something to do with the bluetooth being a specific low powered version called Bluetooth Low Energy (BLE). The RFID system needs a way to become attached to different objects, we are thinking about implementing another tag and/or reader in order to also detect if the backpack is closed or open, which will be good information for our other subsytems. Plus we need to figure out where to put the RFID reader to make up for the range, because if the RFID antenna is at the bottom of the backpack, it cannot reach all the tags.
