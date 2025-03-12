@@ -4,7 +4,7 @@
 - [Feb. 13, 2025 - Product Expansion](#entry1)
 - [Feb. 16, 2025 - Design Review Preparation](#entry2)
 - [Feb. 24, 2025 - Planning PCB Design](#entry3)
-- [Mar. 11, 2025 - Implementing Basic RFID](#entry4)
+- [Mar. 10, 2025 - Implementing Basic RFID](#entry4)
 
 ## February 06, 2025 - Idea Finalization <a name="entry0"></a>
 After individually brainstorming, we met up as a group to pool our ideas and narrow down our options in order to complete an RFA (request for approval) for our project. We decided on a micro-controller based project that would double as a backpack item tracker to prevent losing or leaving behind the contents of one's backpack and act as an anti-theft device. This device would utilize RFID technology to keep track of items and a gyroscope based system that would be used to detect if the backpack is being moved. Criteria for Success Accurate RFID Tracking: The system must reliably detect and track RFID-tagged items in real-time, alerting users when an item is missing. 
@@ -36,7 +36,7 @@ To do next time:
 - Design subsystem circuits
 - Decide on a microcontroller
 
-## March 11, 2025 - Implementing Basic RFID <a name="entry4"></a>
+## March 10, 2025 - Implementing Basic RFID <a name="entry4"></a>
 We worked on different parts of the project to get the basic functionality of some of our subsystems. The RFID system was original setup on an Arduino UNO for testing purposes, and once the read/write functionality was developed, the RFID antenna was rewired to connect to pins on the ESP32 microcontroller that we will be using for our final PCB. After the needed device drivers were installed, the Arduino IDE was suitable to upload the code to the ESP32. The RFID system ended up having the ability to read any RFID tag in the vicinity, and once the user input a value into the Arduino IDE terminal, the system entered write mode, which then writes the string to the next passive RFID tag that comes into the range of the antenna before going back into read only mode. This can happen for any number of passive high-frequency RFID tags.
 \
 \
