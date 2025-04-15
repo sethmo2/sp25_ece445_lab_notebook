@@ -49,6 +49,6 @@ After the bluetooth functionality prototype was integrated with the RFID code, t
 We also had our breadboard demo today which went well. We were able to show off that the reader was able to distinguish between 2 different tags each with its own name. 
 
 ## March 12, 2025 - Second PCB <a name="entry7"></a>
-Shreyas and I worked together on figuring out the PCB with KiCad. After going through more documention, we had a better idea of how the components connected together so we knew where to start. We got the Schematic 
+Shreyas and I worked together on figuring out the PCB with KiCad. After going through more documention, we had a better idea of how the components connected together so we knew where to start. We got the Schematic set up and continued to work o the actual PCB schematic. We thought we got stuff figured out but encountered a lot of errors. One of them was not connected pins that we didn't know could cause errors. We sent it to our TA after finalizing stuff, but he said that we didn't pass the audit but it was a late so we continued to work on it the next day. 
 
 
