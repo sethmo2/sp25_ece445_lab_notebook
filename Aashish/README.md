@@ -34,3 +34,21 @@ To do next time:
 - Begin PCB design
 - Design subsystem circuits
 - Decide on a microcontroller
+
+## March 3, 2025 - Teamwork Evaluation and Design Doc work <a name="entry4"></a>
+Our group met up on to work on the teamwork evaluation that was due today and we also made progress towards the design doc. Today, I worked on putting in the introduction section into it. Additonally, I worked on fleshing out some more ideas for the requirements and verifications section for most of the subsystems. I also worked with Shreyas on getting the parts list and schedule more organized. Lastly, I worked on getting the ethics sections finished up.
+
+## March 10, 2025 - Implementing Basic RFID <a name="entry5"></a>
+We worked on different parts of the project to get the basic functionality of some of our subsystems. The RFID system was original setup on an Arduino UNO for testing purposes, and once the read/write functionality was developed, the RFID antenna was rewired to connect to pins on the ESP32 microcontroller that we will be using for our final PCB. After the needed device drivers were installed, the Arduino IDE was suitable to upload the code to the ESP32. The RFID system ended up having the ability to read any RFID tag in the vicinity, and once the user input a value into the Arduino IDE terminal, the system entered write mode, which then writes the string to the next passive RFID tag that comes into the range of the antenna before going back into read only mode. This can happen for any number of passive high-frequency RFID tags.
+\
+\
+<img src="esp32-rfid.png" alt="drawing" width="500"/>
+
+## March 11, 2025 - Finding Bugs in Current Implementation and Breadboard Demo <a name="entry6"></a>
+After the bluetooth functionality prototype was integrated with the RFID code, the breadboard prototype was put to the test to explain some functionality, and we realized that there were some bugs that need to be fixed with the bluetooth and some functionality added to the RFID system. The bluetooth seems to run on a delay or not receive the signal when it's around other microcontrollers, and we suspect it has something to do with the bluetooth being a specific low powered version called Bluetooth Low Energy (BLE). The RFID system needs a way to become attached to different objects, we are thinking about implementing another tag and/or reader in order to also detect if the backpack is closed or open, which will be good information for our other subsytems. Plus we need to figure out where to put the RFID reader to make up for the range, because if the RFID antenna is at the bottom of the backpack, it cannot reach all the tags. 
+We also had our breadboard demo today which went well. We were able to show off that the reader was able to distinguish between 2 different tags each with its own name. 
+
+## March 12, 2025 - Second PCB <a name="entry7"></a>
+Shreyas and I worked together on figuring out the PCB with KiCad. After going through more documention, we had a better idea of how the components connected together so we knew where to start. We got the Schematic 
+
+
