@@ -6,6 +6,9 @@
 - [Feb. 24, 2025 - Planning PCB Design](#entry3)
 - [Mar. 10, 2025 - Implementing Basic RFID](#entry4)
 - [Mar. 11, 2025 - Finding Bugs in Current Implementation](#entry5)
+- [Mar. 13, 2025 - Debugging PCB for Order](#entry6)
+- [Apr. 06, 2025 - First PCB Order](#entry7)
+- [Apr. 07, 2025 - Second PCB Order](#entry8)
 
 ## February 06, 2025 - Idea Finalization <a name="entry0"></a>
 After individually brainstorming, we met up as a group to pool our ideas and narrow down our options in order to complete an RFA (request for approval) for our project. We decided on a micro-controller based project that would double as a backpack item tracker to prevent losing or leaving behind the contents of one's backpack and act as an anti-theft device. This device would utilize RFID technology to keep track of items and a gyroscope based system that would be used to detect if the backpack is being moved. Criteria for Success Accurate RFID Tracking: The system must reliably detect and track RFID-tagged items in real-time, alerting users when an item is missing. 
@@ -45,3 +48,19 @@ We worked on different parts of the project to get the basic functionality of so
 
 ## March 11, 2025 - Finding Bugs in Current Implementation <a name="entry5"></a>
 After the bluetooth functionality prototype was integrated with the RFID code, the breadboard prototype was put to the test to explain some functionality, and we realized that there were some bugs that need to be fixed with the bluetooth and some functionality added to the RFID system. The bluetooth seems to run on a delay or not receive the signal when it's around other microcontrollers, and we suspect it has something to do with the bluetooth being a specific low powered version called Bluetooth Low Energy (BLE). The RFID system needs a way to become attached to different objects, we are thinking about implementing another tag and/or reader in order to also detect if the backpack is closed or open, which will be good information for our other subsytems. Plus we need to figure out where to put the RFID reader to make up for the range, because if the RFID antenna is at the bottom of the backpack, it cannot reach all the tags.
+
+## March 13, 2025 - Debugging PCB for Order <a name="entry6"></a>
+After my partners finished up our first PCB, we ran it through the design rule checker (DRC) and the electrical rule checker (ERC). It turns out we had many errors. So I did my best to debug all of them, and the main ones were related to the way power and ground was being labeled on the schematic, and there were multiple nets that were not connected in the PCB editor. The schematic also had some problems with unused pins. So after a couple hours of debugging, unfortunately I was not quite able to get rid of all the errors, as there were just only two left to fix but they wouldn't go away. This means we were closer to a viable PCB order, but it would not pass the PCBWay audit in time to meet that order.
+
+## April 06, 2025 - First PCB Order <a name="entry7"></a>
+As a group we got together to fix some of the issues present last time we tried to order out PCB, and managed to fix the power labeling issue. We also added some pull-up resistors and decoupling capacitor as directed by the schematics of some of out parts. We also fixed some clearance issues that were present on both the board and the through holes. We also ended up rerouting some of the parts to make it more space efficient.
+\
+\
+<img src="first-pcb.png" alt="drawing" width="300"/>
+
+## April 07, 2025 - Second PCB Order <a name="entry8"></a>
+For the second PCB that we were submitting, we realized that we did not include any sort of USB or communication integration to write to the ESP32, so without that we wouldn't be able to code out microcontroller. So we decided to add some pin holes on the PCB and connect it to the ESP using the schematic below. We also decided to add pins for a servo motor so that we can figure out how to make our auto-zipping subsystem. There were a bunch more errors with the DRC like earlier, where there was a lot of mix-ups with the power and ground nets, and somehow they got switched up so a lot of the components were reversed. So we had to spend time debugging that, but eventually they passed all the necessary checks and the PCB should hopefully work when they arrive.
+\
+\
+<img src="usb-communication.png" alt="drawing" width="300"/>
+Source = https://en.kohacraft.com/archives/make-a-circuit-using-ch340c-for-esp32-writingsuccess.html
