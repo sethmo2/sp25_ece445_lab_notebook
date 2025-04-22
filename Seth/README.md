@@ -9,6 +9,7 @@
 - [Mar. 13, 2025 - Debugging PCB for Order](#entry6)
 - [Apr. 06, 2025 - First PCB Order](#entry7)
 - [Apr. 07, 2025 - Second PCB Order](#entry8)
+- [April 22, 2025 - Motor Tinkering](#entry9)
 
 ## February 06, 2025 - Idea Finalization <a name="entry0"></a>
 After individually brainstorming, we met up as a group to pool our ideas and narrow down our options in order to complete an RFA (request for approval) for our project. We decided on a micro-controller based project that would double as a backpack item tracker to prevent losing or leaving behind the contents of one's backpack and act as an anti-theft device. This device would utilize RFID technology to keep track of items and a gyroscope based system that would be used to detect if the backpack is being moved. Criteria for Success Accurate RFID Tracking: The system must reliably detect and track RFID-tagged items in real-time, alerting users when an item is missing. 
@@ -64,3 +65,6 @@ For the second PCB that we were submitting, we realized that we did not include 
 \
 <img src="usb-communication.png" alt="drawing" width="300"/>
 Source = https://en.kohacraft.com/archives/make-a-circuit-using-ch340c-for-esp32-writingsuccess.html
+
+## April 22, 2025 - Motor Tinkering <a name="entry9"></a>
+We got together as a group and used our previous RFID and Bluetooth system breadboard to try and get a motor component working. We got a couple motors from one of my kits that were strong enough to pull a bag closed. We got the motor to work how we needed, but we need to figure out how to fix it to the backpack, but it does reel it in. We tried to connect it to the ESP but we were having problems outputting the ESP signal properly to activate the motor because the motor uses more voltage.
