@@ -26,6 +26,7 @@
 
 
 ## February 06, 2025 - Idea Finalization <a name="entry0"></a>
+Objective: Finalize Idea
 After individually brainstorming, we met up as a group to pool our ideas and narrow down our options in order to complete an RFA (request for approval) for our project. We decided on a micro-controller based project that would double as a backpack item tracker to prevent losing or leaving behind the contents of one's backpack and act as an anti-theft device. This device would utilize RFID technology to keep track of items and a gyroscope based system that would be used to detect if the backpack is being moved. Criteria for Success Accurate RFID Tracking: The system must reliably detect and track RFID-tagged items in real-time, alerting users when an item is missing. 
 \
 \
@@ -35,26 +36,30 @@ The decided upon criterion for success:
 - Reliable Auto-Zip & Locking Mechanism: The motorized zippers and locks must function consistently and respond correctly to user-defined security settings.
 
 ## February 13, 2025 - Product Expansion <a name="entry1"></a>
+Objective: Complete Project Proposal
 Today's focus was on the completion of a full project proposal document. We decided to go with the name "Backtracker" while also solidifying the subsystems we would be implementing: accurate RFID based item tracking, gyroscope based anti-theft measures, and an auto-zip and auto-locking mechanism. These subsystems were expanded upon what is necessary for each subsystem. This document also has a more official, in depth problem and solution statement. [Project Proposal Doc Link](https://docs.google.com/document/d/1oT1uViF3huYhxj1f5n7ijpcLWG28EtPaLmi4j_PiVDU/edit?tab=t.0)
 \
 \
 <img src="blockdiagram.png" alt="drawing" width="500"/>
 
 ## February 16, 2025 - Design Review Preparation <a name="entry2"></a>
+Object: Complete preparation for Design Review
 We fleshed out some details on our design in order to present it to the TA and professor for feedback. We have narrowed down our choice of micro-controller to an ESP32 or STM32 and will need to do further analysis. We have also found potential parts for the RFID antenna: ARRUN5-915.000MHZ and MFRC52202HN1,151, of which again further analysis will be needed. We also decided to go with HF (high frequency) RFID tags and transmitter, which operate at 13.56 MHz in order to cover the necessary range to detect items in a backpack.
 
 ## February 24, 2025 - Planning PCB Design <a name="entry3"></a>
+Objective: Start PCB Design
 Our group met up and began discussing the specifics of how we were going to implement the design of each of our three subsystems. The RFID system and the accelerometer/gyroscope system seem to have a straightforward path ahead of designing the circuit since the conceptual functions have been decided upon. Most of our focus was on the automatic zipper subsystem, which seems like it will be the most difficult. We came up with a couple potential ways to implement this, however an outright zipper system may be too complicated and we may have to do automatic backpack closing via a different method.
 Currently, the most promising ideas are to have a motorized spool with higher torque attached to one side of the zipper and then have the cable anchored to the other side of the zipper so that when the backpack is open and the front is folded over, the spool can pull the backpack together to make it easier to seal.
 Sealing with the zipper may be hard, so we came up with the idea to use magnetic fasteners, perhaps in conjunction with a latching mechanism. However this needs to be fleshed out.
 
 
 ## February 28, 2025 – Microcontroller Finalization <a name="entry4"></a>
+Objective: Choose a microcontroller
 Chose the ESP32‑WROOM‑32D for its ready availability and onboard Bluetooth, eliminating the need for a separate transceiver. Bo
 
 
 ## March 6, 2025 - Bluetooth LE <a name="entry5"></a>
-
+Objective: Complete preliminary research on microcontroller
 Notes on bluetooh for ESP32:
 
   Bluetooth Stack - ESP32 uses BLUEDROID to imple,ment the layers of Bluetooth Protocol
@@ -79,12 +84,13 @@ To do next time:
 
 
 ## March 8, 2025 – BLE Demo Connection to iPhone <a name="entry6"></a>
-
+Objective: Progress on implementing BLE
 I followed the Random Nerd Tutorials guide on ESP32 BLE (https://randomnerdtutorials.com/esp32-bluetooth-low-energy-ble-arduino-ide/) and got my ESP32 talking to my iPhone.
 Dove into BLE basics and discovered that Bluetooth Low Energy is designed for short bursts of small‑data transfers, spending most of its time asleep to conserve power—unlike classic Bluetooth, BLE only wakes when a connection’s initiated. configured the ESP32 as a BLE server advertising a custom 128‑bit service UUID with a single READ/WRITE characteristic, and used nRF Connect on my iPhone as the client to scan for “MyESP32” and establish the link. 
 
 
 ## March 9, 2025 – BLE Demo Connection to iPhone 2 <a name="entry7"></a>
+Objective: Progress on implementing BLE
 I'm able to send intentional 'pings' of sort - but im not too sure how to receive actual messages. I think they're being sent but I don't know exactly how to read it on my phone. I also think that I should be able to add some functionality where my phone sends information to the ESP as well.  The following is the general code I produced with a lot of help from the guide.
 ```
 #include <SPI.h>
@@ -169,7 +175,7 @@ Need to:
 
 
 ## March 10, 2025 - Setting up RFID with Bluetooth for Demo  <a name="entry8"></a>
-
+Objective: Centralizing RFID and Bluetooth for demo
 
 <img width="196" alt="Screenshot 2025-05-05 at 4 07 33 PM" src="https://github.com/user-attachments/assets/b20f913b-99b1-4e33-9e86-b2dc425afe02" />
 Our breadboard before the breadboard demo, has our ESP32 programmed with bluetooth functionality and the RC522 functioning with the ESP32 via I2C protocol.
@@ -396,11 +402,12 @@ void loop() {
 Simple program to run both sub parts.
 
 ## March 12, 2025 - PCB 2nd Round Ordering Grind <a name="entry9"></a>
-
+Objective: Complete PCB KiCad stuff
 Aashish and I spent the entire day working on our KiCad and getting all of the wiring for it done. 
 We faced some difficulties with getting certain footprints for our RFID Reader, MFRC522 and our IMU unit so we had to find those online. We don't collectively have too much experience, so we were moving frustratingly slow when it came to completing the PCB.
 
 ## March 13, 2025 - PCB 2nd Round Ordering Grind <a name="entry10"></a>
+Objective: Complete PCB KiCad stuff
 Completed base PCB, getting rid of errors. Since we haven’t hooked the IMU or motor driver up on a breadboard yet, we’re not 100% sure our ESP32‑to‑IMU and ESP32‑to‑motor connections are correct, and we’re worried we might’ve forgotten transistors or resistors for parts that need extra components. Progress felt slow and a bit uncertain, but we did our best to cross‑check pinouts and power rails before wrapping up.
 
 <img width="418" alt="Screenshot 2025-05-05 at 3 53 47 PM" src="https://github.com/user-attachments/assets/8d322308-861f-4e82-9900-fb9687a7f7fb" />
@@ -413,11 +420,11 @@ We sent our gerber file to Rui (TA),if it doesn't end up working - Seth is going
 
 
 ## April 1, 2025 - Working on IPR <a name="entry11"></a>
-
+Objective: Complete Individual Progress Report
 Carved out time to draft and polish my Individual Progress Report. I began by outlining each section—Introduction, Design, Verification, Conclusion, and Works Cited; making sure to spotlight my ESP32–BLE integration, SPI‑IMU interface, and auto‑zipper design challenges. After writing a concise introduction that links my modules to teammates’ work, I expanded the Design and Verification sections with clear figures (the physical layout photo and KiCad schematic) and quantitative test notes (servo load tests, BLE connection stability). 
 
-## April 4, 2025 - 2nd round PCB order debug <a name="entry12"></a>
-
+## April 4, 2025 - 4nd round PCB order debug <a name="entry12"></a>
+Objective: Debug for 4th Round PCB Order
 After adding all our resistors and capacitors and soldering microcontroller onto PCB, we realized we didnt include the components (programmer) to flash our PCB. Trying to compensate our mistake, we started making amendements to the schematic to add a JTAG UART/ programmer in order to be able to flash it. This is the part we were thinking of using as the intermediary.
 
 
@@ -428,6 +435,7 @@ After adding all our resistors and capacitors and soldering microcontroller onto
 
 
 ## April 7, 2025 - PCB 4th order Debugging <a name="entry13"></a>
+Objective: Complete debug for PCB 4th Round 
   Realized that we did not need to add that specific programmer to our KiCad, we can use one of the breakout programmers that 2070 provides, after speaking with a TA we believed this to be a less risky approach as we would not risk a mistake on our part that prevented us from programming our board. So, we just added connector pins that corresponded to our specific programmer.
 
 
@@ -440,6 +448,8 @@ WE also forgot to accomodate our motor on the other PCB attempts, so we added pi
 
 
 ## April 19, 2025 - IMU <a name="entry14"></a>
+Objective: Complete IMU implementation and get readings from it
+
 Got IMU Working with I2C, had to reassign some of the pins that were being used for RFID for general input output purpose but it was actually the designated i2C SDA, which is required for the communication. I'm using the MPU6050 IMU breakout, and I was able to get it working for the most part and outputing acceleration in each direction, and angle of tilt in each direction.
 
 The specific IMU breakout board that we chose:
@@ -448,10 +458,13 @@ The specific IMU breakout board that we chose:
 
 
 ## April 20, 2025 - IMU - Motor work part 2 <a name="entry15"></a>
+Objective: Connect IMU and Motor logic
+
 Working on triggering a motor based off of an IMU threshold, having extreme difficulty getting the motor to work on a GPIO Pin set HIGH though. It seems that the GPIO pins don't work at being set HIGH for both LEDs and moreso the motor. Spent all day today, trying to figure out why the motor does not start running. Used Scopy and Adalm to debug and it does seem to be getting set HIGH on the trigger, so I'm not too sure what's happening. I did write out the rest of the code for getting the motor to 'close' for 10 seconds after the trigger occurs. One difficulty I'm facing is that the IMU spikes very randomly and unnecessarily, every so often. Not too sure where to proceed but getting the motor to run on the logic I've coded seems to be a good start.
 
 
 ## April 21, 2025 - IMU - Motor work part 3 <a name="entry16"></a>
+Objective: Complete IMU - Motor Work
 Realized that the problem with turning on the motor with ESP32 GPIO pins is that the GPIO pins do not provide enough current in order to power the DC motor. So I added a MOSFET and added the logic associated with power the motor through that with a diode that is seen below:
 
 <img width="759" alt="Screenshot 2025-05-05 at 10 22 07 PM" src="https://github.com/user-attachments/assets/51cfbee4-7383-4db8-ad00-65855332df9e" />
@@ -459,19 +472,23 @@ Realized that the problem with turning on the motor with ESP32 GPIO pins is that
 After this, the IMU motor section started functioning exactly started as intended.
 
 ## April 24 2025 - Bluetooth -RFID <a name="entry17"></a>
+Objective: Complete Bluetooth RFID Logic
   Bluetooth RFID interface set up as needed. Bluetooth device receives all of the notifications of the RFID scanning devices in and out of the box. So all of the notification features we promised were able to be satisfied.
   
 ## April 26, 2025 - Supplementary Two-way Bluetooth Interface <a name="entry18"></a>
+Objective: Finish send functionality for bluetooth
 Explored NRF connect and figured out how to write information from the bluetooth device by writing to characteristic - so added some logic to code so that user device is able to command 'close' from the bluetooth device, so adding some advanced functionality we did not think we would have.
 
 
 ## April 26 2025 - Physical Backpack <a name="entry19"></a>
+Objective: Progress on Physical Backpack
 Worked on physical design, making the backpack run as smoothly as possible. Got the backpack running pretty smoothly, just some finetuning of the physical design to fix the aesthetic.
 
 ## April 27 2025 - Physical Backpack 2<a name="entry20"></a>
+Objective: Complete Physical Backpack deisng
 Wire we were using broke during demo, we need to replace it before our demo, shouldn't be too hard but it takes a really long time to get it running as smooth as we got it to. All of the members have other responsibilities such as interviewing, other heavy classes, or multiple jobs, so it'll be a time crunch to get it done before our demo in a few days.
 
-
+## Post-Completion:
 ## April 29 2025 - Demo day<a name="entry21"></a>
 Our ESP32 got corrupted when we were running it a few hours before demo. This is something I'm realizing after the fact when debugging and seeing why it went wrong. It started failing more and more frequently after the demo.
 
