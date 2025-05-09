@@ -9,11 +9,13 @@
 - [Mar. 13, 2025 - Debugging PCB for Order](#entry6)
 - [Apr. 06, 2025 - First PCB Order](#entry7)
 - [Apr. 07, 2025 - Second PCB Order](#entry8)
-- [Apr. 22, 2025 - Motor Tinkering](#entry9)
-- [Apr. 25, 2025 - First Parts of the Prototype](#entry10)
-- [Apr. 26, 2025 - PCB Work](#entry11)
-- [Apr. 28, 2025 - Making a Prototype](#entry12)
-- [Apr. 29, 2025 - Final Touches and Presentation](#entry13)
+- [Apr. 18, 2025 - Working on Documents](#entry9)
+- [Apr. 21, 2025 - Subsystem Progress](#entry10)
+- [Apr. 22, 2025 - Motor Tinkering](#entry11)
+- [Apr. 25, 2025 - First Parts of the Prototype](#entry12)
+- [Apr. 26, 2025 - PCB Work](#entry13)
+- [Apr. 28, 2025 - Making a Prototype](#entry14)
+- [Apr. 29, 2025 - Final Touches and Presentation](#entry15)
 
 ## February 06, 2025 - Idea Finalization <a name="entry0"></a>
 After individually brainstorming, we met up as a group to pool our ideas and narrow down our options in order to complete an RFA (request for approval) for our project. We decided on a micro-controller based project that would double as a backpack item tracker to prevent losing or leaving behind the contents of one's backpack and act as an anti-theft device. This device would utilize RFID technology to keep track of items and a gyroscope based system that would be used to detect if the backpack is being moved. Criteria for Success Accurate RFID Tracking: The system must reliably detect and track RFID-tagged items in real-time, alerting users when an item is missing. 
@@ -70,17 +72,23 @@ For the second PCB that we were submitting, we realized that we did not include 
 <img src="usb-communication.png" alt="drawing" width="300"/>
 Source = https://en.kohacraft.com/archives/make-a-circuit-using-ch340c-for-esp32-writingsuccess.html
 
-## April 22, 2025 - Motor Tinkering <a name="entry9"></a>
+## April 18, 2025 - Working on Documents <a name="entry9"></a>
+We met up today, then separately worked on some required docs for the class.
+
+## April 21, 2025 - Subsystem Progress <a name="entry10"></a>
+We met today and while Shreyas worked on the IMU and Bluetooth, Aashish and I worked on the RFID more. We worked on getting the code working and making progress with the part where the code tracks what was put in and what was removed. I also worked on soldering some components to the breakout bored and other items we needed to get the breadboard functioning.
+
+## April 22, 2025 - Motor Tinkering <a name="entry11"></a>
 We got together as a group and used our previous RFID and Bluetooth system breadboard to try and get a motor component working. We got a couple motors from one of my kits that were strong enough to pull a bag closed. We got the motor to work how we needed, but we need to figure out how to fix it to the backpack, but it does reel it in. We tried to connect it to the ESP but we were having problems outputting the ESP signal properly to activate the motor because the motor uses more voltage.
 
-## April 25, 2025 - First Parts of the Prototype <a name="entry10"></a>
-We started making the prototype for the backpack using our breadboard to pull the backpack closed. The other subsystems functioned well, but the motor was the trickiest. We decided to use yarn to close it, feeding it through a hole in the backpack and latch it to the flap. The problem is that the yarn would get tangled or snap frequently, so we would have to replace it a lot.
+## April 25, 2025 - First Parts of the Prototype <a name="entry12"></a>
+We started making the prototype for the backpack using our breadboard to pull the backpack closed. The other subsystems functioned well, but the motor was the trickiest. We decided to use yarn to close it, feeding it through a hole in the backpack and latch it to the flap. The problem is that the yarn would get tangled or snap frequently, so we would have to replace it a lot. I also went to ECEB to pick up smaller RFID tags to fasten to the items in the backpack.
 
-## April 26, 2025 - PCB Work <a name="entry11"></a>
+## April 26, 2025 - PCB Work <a name="entry13"></a>
 We went to ECEB to work in the lab as we got our most recent PCB order. We used an ESP32 and a stencil with the oven to fasten the ESP to the PCB. I also soldered the resistors, transistors, capacitors, and pins to the PCB. We also used the soldering iron to fasten pins to other parts we had, like the RFID breakout board. We also attached wires to a mini USB to UART programmer in order to program the ESP.
 
-## April 28, 2025 - Making a Prototype <a name="entry12"></a>
+## April 28, 2025 - Making a Prototype <a name="entry14"></a>
 We met up as a group today, so Aashish and I worked on putting together a full working prototype. We had an issue with the yarn snapping as the motor retracted the flap, so we went to Target and found some picture frame wire that we could use. This was stronger and more flexible than the yarn, but it still has some problems where it snags on the backpack fabric. We used duck tape to fasten the breadboard to the backpack and keep it stable. We also used a four AA battery pack that was attached to the back of the breadboard, which we then hooked up to the motor. So most of the time, the motor successfully pulled the backpack closed when the Bluetooth and if the IMU was jostled enough.
 
-## April 29, 2025 - Final Touches and Presentation <a name="entry13"></a>
+## April 29, 2025 - Final Touches and Presentation <a name="entry15"></a>
 We prepped and gave our demo today, so we had to iron out a couple bugs in the ESP, which it turns out we burnt out. Our power source was too high in voltage so we replaced it with a portable charger and a new ESP which worked better. We also replaced the string so that it wouldn't get snagged since the other one got knotted. We were able to program it and use the Bluetooth along with the IMU to create a somewhat functional prototype. Then we went to give the mock demo.
