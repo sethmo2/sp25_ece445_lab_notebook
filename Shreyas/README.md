@@ -453,6 +453,7 @@ Working on triggering a motor based off of an IMU threshold, having extreme diff
 
 ## April 21, 2025 - IMU - Motor work part 3 <a name="entry16"></a>
 Realized that the problem with turning on the motor with ESP32 GPIO pins is that the GPIO pins do not provide enough current in order to power the DC motor. So I added a MOSFET and added the logic associated with power the motor through that with a diode that is seen below:
+
 <img width="759" alt="Screenshot 2025-05-05 at 10 22 07 PM" src="https://github.com/user-attachments/assets/51cfbee4-7383-4db8-ad00-65855332df9e" />
 
 After this, the IMU motor section started functioning exactly started as intended.
@@ -492,3 +493,24 @@ THe ESP32 upon closer debugging, started spamming this message - which is why it
 
 ## April 29 2025 - Post Demo <a name="entry22"></a>
 Exchanged the ESP32 with a new one and added an appropriate 5V power source, and it started functioning perfectly! Slightly frustrated because of what happened before the demo, but not the end of the world - got it working for the Extra Credit video. Was very fulfilling to work on this project and happy with my experience in the class.
+
+## April 30 2025 – Final Report Outline <a name="entry23"></a>
+
+Drafted the overall structure of the final report: outlined Introduction, Methods, Results, Discussion, and Conclusion sections. Collected all schematics and block diagrams into one folder, and started writing the Introduction with project motivation and scope.
+
+## May 3 2025 – Results & Discussion Draft <a name="entry24"></a>
+
+Completed the Results section: summarized sensor calibration data, motor torque tests, and Bluetooth connectivity logs. Began the Discussion subsection by interpreting the performance metrics and noting limitations encountered with the MPU‑6050 readings.
+
+## May 6 2025 – Conclusion & Revision <a name="entry25"></a>
+
+Wrote the Conclusion: reflected on design successes, key learnings, and potential future improvements (e.g., integrating a higher‑torque motor). Performed a comprehensive proofread, standardized figure captions, and ensured all citations were formatted correctly.
+
+## May 7 2025 – Final Touches <a name="entry26"></a>
+
+Added the Abstract and Executive Summary. Checked all formatting against the report template, updated table of contents, and inserted page numbers. Exported the document to PDF for submission.
+
+## May 8 2025 – Lab Check‑Out & Wrap‑Up <a name="entry27"></a>
+
+Completed lab check‑out procedures: cleaned and organized one lab desk, filled out the ICES feedback form, and returned the mini‑USB programmer to the equipment cabinet. Celebrated the end of the semester’s lab work!
+
