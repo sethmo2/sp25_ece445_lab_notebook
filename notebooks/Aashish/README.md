@@ -125,28 +125,23 @@ Rebooting...
 THe ESP32 upon closer debugging, started spamming this message - which is why it was not working for a large portion of the time. We suspect that it was our 6.4V battery source used for a breakout board that was only designed to step down 5V for the ESP 32's target voltage of 3.3V. I realized that running too much voltage or current into my ESP32 likely fried either its tiny external flash chip or its onboard 3.3 V regulator. Those flash cells are delicate—one rogue spike can scramble entire sectors so the CPU ends up reading garbage. Or if the little LDO regulator overheats or latches up under a heavy draw, it can’t hold a steady 3.3 V and the resulting brown‑outs quietly corrupt RAM or flash writes mid‑operation. In both scenarios, bad data leads to invalid instructions and the repeated crashes we were wrestling with.
 
 
-## April 29 2025 - Post Demo <a name="entry17"></a>
-Exchanged the ESP32 with a new one and added an appropriate 5V power source, and it started functioning perfectly! Slightly frustrated because of what happened before the demo, but not the end of the world - got it working for the Extra Credit video. Was very fulfilling to work on this project and happy with my experience in the class.
+## April 29, 2025 – Post Demo <a name="entry17"></a>
+After the stressful events during the demo, we swapped out the corrupted ESP32 chip with a brand new one and made sure to use a regulated 5V power source to avoid any overvoltage issues. Thankfully, this solved all the problems we had been facing — the new setup worked flawlessly. While it was frustrating to deal with a critical failure so close to the finish line, we were relieved to get everything functioning in time for our extra credit video submission. In the end, despite the setbacks, it felt incredibly rewarding to see the system up and running. I’m proud of the resilience and problem-solving our team showed, and I’m genuinely happy with everything I learned and accomplished through this project.
 
-## April 30 2025 – Final Report Outline <a name="entry18"></a>
+## April 30, 2025 – Final Report Outline <a name="entry18"></a>
+I spent time outlining the full structure of our final report today. I divided the document into five main sections — Introduction, Methods, Results, Discussion, and Conclusion — to clearly tell the story of our design process and implementation. I also began gathering all relevant figures, schematics, and diagrams into a centralized folder so that they could be easily inserted into the appropriate sections. The Introduction draft is underway, where I started writing about the motivation behind the project, its intended impact, and the scope of our solution.
 
-Drafted the overall structure of the final report: outlined Introduction, Methods, Results, Discussion, and Conclusion sections. Collected all schematics and block diagrams into one folder, and started writing the Introduction with project motivation and scope.
+## May 3, 2025 – Results & Discussion Draft <a name="entry19"></a>
+I finished writing the Results section today, compiling all of our test data and system performance insights. This included sensor calibration results for the IMU, measurements from motor torque testing, and logs of Bluetooth connectivity and stability. Afterward, I began drafting the Discussion section, where I analyzed the meaning of our data and highlighted both the strengths and shortcomings of our design. One recurring challenge I noted was the noise and instability in MPU‑6050 readings, which affected motion accuracy. This section is shaping up to be a good reflection of what worked well and what we’d want to improve.
 
-## May 3 2025 – Results & Discussion Draft <a name="entry19"></a>
+## May 6, 2025 – Final Presentation with Conclusion & Revision <a name="entry20"></a>
+We had our Presentation today and it went really well. We all did a great job presenting our product and I couldn't be any happier for the team today. Additionally, I wrote the Conclusion for our final report. I reflected on the technical milestones we achieved, the design challenges we overcame, and the teamwork that helped push the project to completion. I made sure to mention lessons learned from working with microcontrollers, sensors, and PCB design, and suggested future enhancements like using a stronger motor or refining our physical attachment system. I also did a complete revision pass across the document — proofreading for clarity and grammar, standardizing the formatting of all figures and captions, and double-checking our references and citations for correctness.
 
-Completed the Results section: summarized sensor calibration data, motor torque tests, and Bluetooth connectivity logs. Began the Discussion subsection by interpreting the performance metrics and noting limitations encountered with the MPU‑6050 readings.
+## May 7, 2025 – Final Touches <a name="entry21"></a>
+We’re nearly done! I wrapped up the remaining pieces of the report today by adding both the Abstract and the Executive Summary. Then, I carefully reviewed the entire document to ensure it adhered to the official report template. This included updating the table of contents, checking all section headers, and inserting correct page numbers. Once everything looked clean and polished, I exported the final version to PDF. It was satisfying to see all of our hard work laid out in one cohesive document, ready for submission.
 
-## May 6 2025 – Conclusion & Revision <a name="entry20"></a>
-
-Wrote the Conclusion: reflected on design successes, key learnings, and potential future improvements (e.g., integrating a higher‑torque motor). Performed a comprehensive proofread, standardized figure captions, and ensured all citations were formatted correctly.
-
-## May 7 2025 – Final Touches <a name="entry21"></a>
-
-Added the Abstract and Executive Summary. Checked all formatting against the report template, updated table of contents, and inserted page numbers. Exported the document to PDF for submission.
-
-## May 8 2025 – Lab Check‑Out & Wrap‑Up <a name="entry22"></a>
-
-Completed lab check‑out procedures: cleaned and organized one lab desk, filled out the ICES feedback form, and returned the mini‑USB programmer to the equipment cabinet. Celebrated the end of the semester’s lab work!
+May 8, 2025 – Lab Check-Out & Wrap-Up <a name="entry22"></a>
+We officially closed the chapter on this project today. I completed all the required lab check-out steps: organized and cleaned our lab desk, returned the mini-USB programmer to the equipment cabinet, and submitted the ICES feedback form. It was a reflective moment — the culmination of months of hard work, trial and error, and creative problem-solving. I'm walking away from this experience with a deeper understanding of embedded systems, hardware debugging, and team collaboration. Proud of what we built and the growth we had along the way.
 
 
 
